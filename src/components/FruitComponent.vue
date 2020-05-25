@@ -8,10 +8,11 @@
 
 <script lang="ts">
 import {Component, Vue} from 'vue-property-decorator';
-import {Pomme} from "@/model/fruits";
+import {Poire, Pomme} from "@/model/fruits";
+import {services} from "@/service/services";
 
 @Component
 export default class FruitComponent extends Vue {
-    fruit: Pomme = {label: "Pomme", calibre: 5, aoc: true}
+    fruit: Pomme | Poire = services.fruit.getOneFruit();
 }
 </script>
