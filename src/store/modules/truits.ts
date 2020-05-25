@@ -4,11 +4,21 @@ import {services} from "@/service/services";
 @Module
 export class Fruits extends VuexModule {
     // state
-    fruit = services.fruit.getOneFruit();
+    fruits = [services.fruit.getOneFruit()];
+
+    index = 0;
 
     @Mutation
     newFruit() {
-        this.fruit = services.fruit.getOneFruit();
+        this.fruits.push(services.fruit.getOneFruit());
     }
 
+    @Mutation
+    selectFruit(index: number){
+        this.index=index;
+    }
+
+    currentFruit(){
+        return this.fruits[this.index];
+    }
 }
