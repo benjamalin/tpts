@@ -1,13 +1,17 @@
-
-
 export interface Pomme {
-    label: "Pomme",
-    calibre: number,
-    aoc: boolean,
+    label: string;
+    calibre: number;
+    aoc: boolean;
+    type: TypeDeFruit.pomme;
 }
 
 export interface Poire {
-    label: "Poire",
-    calibre: number
+    label: string;
+    calibre: number;
+    type: TypeDeFruit.poire;
 }
 
+export enum TypeDeFruit {
+    pomme = "pomme",
+    poire = "poire"
+}
