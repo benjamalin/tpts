@@ -69,7 +69,6 @@ export default class FruitComponent extends Vue {
         background-color: lightyellow;
     }
 
-
     .fruit_selector.fruit--pomme {
         background-color: greenyellow;
     }
