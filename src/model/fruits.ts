@@ -1,13 +1,13 @@
 
 
 export interface Pomme {
-    label: string,
+    label: "Pomme",
     calibre: number,
     aoc: boolean,
 }
 
 export interface Poire {
-    label: string,
+    label: "Poire",
     calibre: number
 }
 
