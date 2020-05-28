@@ -1,4 +1,4 @@
-import {Action, Module, Mutation, VuexModule} from "vuex-class-modules";
+import {Module, Mutation, VuexModule} from "vuex-class-modules";
 import {services} from "@/service/services";
 
 @Module
@@ -11,14 +11,15 @@ export class Fruits extends VuexModule {
     @Mutation
     newFruit() {
         this.fruits.push(services.fruit.getOneFruit());
+        this.index = this.fruits.length - 1;
     }
 
     @Mutation
-    selectFruit(index: number){
-        this.index=index;
+    selectFruit(index: number) {
+        this.index = index;
     }
 
-    currentFruit(){
+    currentFruit() {
         return this.fruits[this.index];
     }
 }
